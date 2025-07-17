@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<form th:action="@{'/employees/edit/'+${employee.id}}" th:object="${employee}" method="post">
+    Name:<input type="text" th:field="*{name}"><br>
+    Department:<input type="text" th:field="*{department}"><br>
+    Salary:<input type="number" th:field="*{salary}"><br>
+    <button type="Submit"> Update </button>
+</form>
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>
